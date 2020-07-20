@@ -1,1 +1,1 @@
-# &#128717 parf_shop
+# parf_shop
