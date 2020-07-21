@@ -7,46 +7,62 @@
   <title>Parf</title>
 </head>
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="site-header">
-    <div class="site-header__wrapper">
-      <a href="#" class="logo">
+    <div class="site-header__wrapper wrapper wrapper--header">
+      <a href="#" class="site-header__logo logo">
         <div>Logo</div>
       </a>
-      <nav class="navigation">
-        <ul class="navigation__list nav-list">
-          <li>
-            <a href="">Товары</a>
-          </li>
-          <li>
-            <a href="">Доставка и оплата</a>
-          </li>
-          <li>
-            <a href="">Контакты</a>
-          </li>
-          <li>
-            <a href="">Адрес магазина</a>
-          </li>
-          <li>
-            <a href="">Отзывы</a>
-          </li>
-          <li>
-            <a href="">Личный кабинет</a>
-          </li>
-          <li>
-            <a href="">О нас</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="nav">
+          <div class="navigation">
+            <button class="button button--menu nav__button">
+              <span class="visually-hidden">
+                Кнопка открытия меню
+              </span>
+            </button>
+          <ul class="nav-list nav__list">
+            <li class="nav-list__item">
+              <a href="#about" class="nav-list__link">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#about" class="nav-list__link">Товары</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#education" class="nav-list__link">Доставка и оплата</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#skills" class="nav-list__link">Контакты</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#work" class="nav-list__link">Адрес магазина</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#social" class="nav-list__link">Отзывы</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#social" class="nav-list__link">Личный кабинет</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#social" class="nav-list__link">О нас</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     <div class="site-header__section">
       <form>
         <input type="text" name="search">
         <button type="submit">search</button>
       </form>
       <a href="link-to-profile/">
-        <div></div>
+        <svg class="" width="32" height="32">
+          <use xlink:href="#user-icon"></use>
+        </svg>
       </a>
     </div>
     </div>
   </header>
+  <script src="./js/script.js"></script>
 </body>
 </html>
