@@ -1,22 +1,56 @@
 .button--menu {
-  width: 25px;
-  height: 16px;
+  position: absolute;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
   padding: 0;
 
-  background-color: transparent;
   border: none;
+  border-radius: 50%;
+  background-color: @clear-neutral-color;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
+.button--menu-inner,
+.button--menu-inner::before,
+.button--menu-inner::after {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-top: -1px;
+  margin-left: 14px;
 
-    background: @accent-color;
-    box-shadow: 0 6px 0 0  @accent-color,
-      0 12px 0 0  @accent-color;
+  background-color: @accent-color;
+
+  transition: 0.2s;
+}
+
+.button--menu-inner::before,
+.button--menu-inner::after {
+  content: "";
+  display: block;
+}
+
+.button--menu-inner::before {
+  left: -14px;
+  transform: translateY(-4px);
+}
+
+.button--menu-inner::after {
+  left: -14px;
+  transform: translateY(6px);
+}
+
+.button--menu-active {
+  .button--menu-inner {
+    height: 0;
+  }
+
+  .button--menu-inner::before {
+    transform: rotate(45deg);
+  }
+
+  .button--menu-inner::after {
+    transform: rotate(-45deg);
   }
 }
